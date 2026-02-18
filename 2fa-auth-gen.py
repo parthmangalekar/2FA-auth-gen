@@ -1,4 +1,6 @@
 import time 
 import pyotp
 
-key
+key = pyotp.random_base32()
+
+print (key)
