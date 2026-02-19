@@ -1,5 +1,6 @@
 import time 
 import pyotp
+import qrcode
 
 key = "Specialkey"
 
@@ -17,3 +18,5 @@ if (input_code== code):
 
 else:
     print('False')
+
+uri = pyotp.totp.TOTP(key).provisioning_uri(name="MikeSmith123", issuer_name="Specialkey App")
