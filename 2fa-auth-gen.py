@@ -11,7 +11,6 @@ print(totp.now())
 input_code= input("Enter 2FA Code: ")
 
 code= totp.now()
-print(input_code)
 
 if (input_code== code):
     print('True')
