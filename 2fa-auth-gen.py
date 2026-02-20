@@ -16,4 +16,4 @@ print('Link: ', uri)
 
 #QR code to scan
 cwd = os.getcwd()
-print('Your QR code would be saved at: ' ,cwd, "As'2FA.png'"), qrcode.make(uri).save("2FA.png") 
+print('Your QR code would be saved as 2FA.png at: ' ,cwd, ), qrcode.make(uri).save("2FA.png") 
