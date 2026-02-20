@@ -1,6 +1,7 @@
 import time 
 import pyotp
 import qrcode
+import os
 
 key = pyotp.random_base32()
 print('Your secret key is:', (key))
@@ -14,4 +15,5 @@ uri = pyotp.totp.TOTP(key).provisioning_uri(name="MikeSmith123", issuer_name="Sp
 print('Link: ', uri)
 
 #QR code to scan
-qrcode.make(uri).save("2FA.png") 
+cwd = os.getcwd()
+print('Your QR code would be saved at: ' ,cwd, "As'2FA.png'"), qrcode.make(uri).save("2FA.png") 
