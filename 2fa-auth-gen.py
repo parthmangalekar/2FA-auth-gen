@@ -2,7 +2,8 @@ import time
 import pyotp
 import qrcode
 
-key = "Specialkey"
+key = pyotp.random_base32()
+print('Your secret key is:', (key))
 
 totp = pyotp.TOTP(key)
 
