@@ -8,12 +8,10 @@ print('Your secret key is:', (key))
 totp = pyotp.TOTP(key)
 
 
-print(totp.now())
-
 uri = pyotp.totp.TOTP(key).provisioning_uri(name="MikeSmith123", issuer_name="Specialkey App")
 
 
-print(uri)
+print('Link: '), print(uri)
 
 #QR code to scan
 qrcode.make(uri).save("2FA.png") 
