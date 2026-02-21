@@ -4,13 +4,13 @@ import qrcode
 import os
 
 key = pyotp.random_base32()
-print('Your secret key is:', (key))
 
 totp = pyotp.TOTP(key)
 
 
 uri = pyotp.totp.TOTP(key).provisioning_uri(name=(input('Username: ')), issuer_name=(input("Issuer's name: ")))
 
+print('Your secret key is:', (key))
 
 print('Link: ', uri)
 
