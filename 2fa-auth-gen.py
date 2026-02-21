@@ -9,7 +9,7 @@ print('Your secret key is:', (key))
 totp = pyotp.TOTP(key)
 
 
-uri = pyotp.totp.TOTP(key).provisioning_uri(name="MikeSmith123", issuer_name="Specialkey App")
+uri = pyotp.totp.TOTP(key).provisioning_uri(name=(input('Username: ')), issuer_name=(input("Issuer's name: ")))
 
 
 print('Link: ', uri)
