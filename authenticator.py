@@ -13,10 +13,12 @@ try:
 
         time_remaining= int(30 -(time.time() % 30))
 
-        bar = "/" * (30 - time_remaining) + "-" * time_remaining
+        bar = "█" * (30 - time_remaining) + "-" * time_remaining
 
-        sys.stdout.write (f"/rTOTP Code: {current_code} | [{bar}] {time_remaining}")
-        sys.stdout.flush()
+        print(f"\rCode: {current_code} | [{bar}] {time_remaining}s", end="", flush=True)
+
+        if time_remaining == 30:
+            print()
 
         time.sleep(1)
 
