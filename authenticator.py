@@ -14,3 +14,8 @@ try:
         time_remaining= int(30 -(time.time() % 30))
 
         bar = "/" * (30 - time_remaining) + "-" * time_remaining
+
+        sys.stdout.write (f"/rTOTP Code: {current_code} | [{bar}] {time_remaining}") sys.stdout.flush()
+
+        time.sleep(1)
+        
