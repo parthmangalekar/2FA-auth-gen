@@ -1,12 +1,11 @@
 import pyotp
 import time
-import sys
+import sys 
 
-key= pyotp.random_base32()
+key= (input('Enter your secret key: ')) 
 totp = pyotp.TOTP(key)
 
-print ('Secret key: ', (key))
-
+print ('Secret key: ', (key)) 
 try:
     while True:
         current_code= totp.now()
@@ -15,7 +14,7 @@ try:
 
         bar = "█" * (30 - time_remaining) + "-" * time_remaining
 
-        print(f"\rCode: {current_code} | [{bar}] {time_remaining}s", end="", flush=True)
+        print(f"\rCode: {current_code} | [{bar}] {time_remaining}s", end="", flush=True) 
 
         if time_remaining == 30:
             print()
