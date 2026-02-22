@@ -1,6 +1,5 @@
 import pyotp
 import time
-import sys 
 
 key= (input('Enter your secret key: ')) 
 totp = pyotp.TOTP(key)
