@@ -5,7 +5,6 @@ import sys
 key= (input('Enter your secret key: ')) 
 totp = pyotp.TOTP(key)
 
-print ('Secret key: ', (key)) 
 try:
     while True:
         current_code= totp.now()
