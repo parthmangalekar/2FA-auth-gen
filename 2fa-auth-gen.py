@@ -1,4 +1,3 @@
-
 import pyotp
 import qrcode
 import os
