@@ -6,6 +6,7 @@ print('Select a method: ')
 print("1. Scan QR Code (Coming Soon)")
 print("2. Paste Link (Coming Soon)")
 print("3. Enter Secret Key")
+mode= int(input(''))
 
 key= (input('Enter your secret key: ')) 
 totp = pyotp.TOTP(key)
