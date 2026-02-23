@@ -13,7 +13,11 @@ if choice =='1':
     print('Qr code detection code is yet to be implemented. check back later :D')
 
 elif choice =='2':
-    print('Link support is yet to be implemented check back later :D')
+   url= (input('Paste your link here: '))
+   try:
+       totp = pyotp.parse_uri(url)
+   except ValueError:
+       print('Invalid')
 
 elif choice =='3':
     key= (input('Enter your secret key: ')) 
