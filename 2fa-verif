@@ -1,6 +1,5 @@
-import time
 import pyotp
-import qrcode
+
 
 key=(input('Paste your secret key here: '))
 
