@@ -7,7 +7,7 @@ print("1. Scan QR Code (Coming Soon)")
 print("2. Paste Link (Coming Soon)")
 print("3. Enter Secret Key")
 
-choice = (input(''))
+choice = (input('Select a method: '))
 
 if choice =='1':
     print('Qr code detection code is yet to be implemented. check back later :D')
