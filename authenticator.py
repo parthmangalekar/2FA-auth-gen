@@ -23,7 +23,6 @@ elif choice =='3':
     key= (input('Enter your secret key: ')) 
     totp = pyotp.TOTP(key)
 
-
 try:
     while True:
         current_code= totp.now()
