@@ -7,15 +7,18 @@ print("1. Scan QR Code (Coming Soon)")
 print("2. Paste Link (Coming Soon)")
 print("3. Enter Secret Key")
 
-choice = int(input(''))
+choice = (input(''))
 
 if choice =='1':
     print('Qr code detection code is yet to be implemented. check back later :D')
-key= (input('Enter your secret key: ')) 
 
-elif choice ==2:
+elif choice =='2':
     print('Link support is yet to be implemented check back later :D')
-totp = pyotp.TOTP(key)
+
+elif choice =='3':
+    key= (input('Enter your secret key: ')) 
+    totp = pyotp.TOTP(key)
+
 
 try:
     while True:
