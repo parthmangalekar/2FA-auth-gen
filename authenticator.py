@@ -17,7 +17,8 @@ elif choice =='2':
    try:
        totp = pyotp.parse_uri(url)
    except ValueError:
-       print('Invalid')
+       print('Invalid link ')
+       exit()
 
 elif choice =='3':
     key= (input('Enter your secret key: ')) 
