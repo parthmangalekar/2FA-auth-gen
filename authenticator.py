@@ -31,7 +31,8 @@ if choice =='1':
         else: 
             print('Error: OpenCV could not find a QR code in 2FA.png')
     else:
-
+        print(f"Error: '{AUTO_FILE_NAME}' not found in {pathlib.Path.cwd()}")
+        exit()
         
 
 elif choice =='2':
