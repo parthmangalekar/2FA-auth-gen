@@ -14,19 +14,20 @@ choice = (input('Select a method: '))
 
 if choice =='1':
     AUTO_FILE_NAME= '2FA.png'
-    file_path= pathlib.Path.cwd / AUTO_FILE_NAME
+    file_path= pathlib.Path.cwd() / AUTO_FILE_NAME
     if file_path.exists() and file_path.is_file():
-        print('Found', AUTO_FILE_NAME, 'decoding...')
+        print(f"Found {AUTO_FILE_NAME}, decoding...")
         
         img=cv2.imread(str(file_path))
         detector =cv2.QRCodeDetector()
-        data, points, _ = detector.detectANdDecode(img)
+        data, points, _ = detector.detectAndDecode(img)
         if data:
             try: 
                 totp= pyotp.parse_uri(data)
-                print('Successfully loaded: {totp.name}')
+                print(f"Successfully loaded: {totp.name}")
             except ValueError:
                 print('Error: The QR code in 2FA.png is not valid')
+            
 
         else: 
             print('Error: OpenCV could not find a QR code in 2FA.png')
