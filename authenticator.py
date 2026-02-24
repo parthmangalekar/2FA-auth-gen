@@ -20,6 +20,18 @@ if choice =='1':
         
         img=cv2.imread(str(file_path))
         detector =cv2.QRCodeDetector()
+        data, points, _ = detector.detectANdDecode(img)
+        if data:
+            try: 
+                totp= pyotp.parse_uri(data)
+                print('Successfully loaded: {totp.name}')
+            except ValueError:
+                print('Error: The QR code in 2FA.png is not valid')
+
+        else: 
+            print('Error: OpenCV could not find a QR code in 2FA.png')
+    else:
+
         
 
 elif choice =='2':
