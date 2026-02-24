@@ -13,6 +13,10 @@ print("3. Enter Secret Key")
 choice = (input('Select a method: '))
 
 if choice =='1':
+    AUTO_FILE_NAME= '2FA.png'
+    file_path= pathlib.Path.cwd / AUTO_FILE_NAME
+    if file_path.exists() and file_path.is_file():
+        print(f'Found', AUTO_FILE_NAME, 'decoding...')
 
 elif choice =='2':
    url= (input('Paste your link here: '))
