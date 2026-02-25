@@ -5,10 +5,10 @@ import os
 import pathlib
 
 print ('-----Authenticator setup-----')
-print('Select a method: ')
-print("1. Scan QR Code ")
+print('Select a method ')
+print("1. Scan QR Code")
 print("2. Enter link")
-print("3. Enter Secret Key")
+print("3. Enter Key")
 
 choice = (input('Select a method: '))
 
