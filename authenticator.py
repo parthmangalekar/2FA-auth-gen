@@ -1,7 +1,6 @@
 import pyotp
 import time
 import cv2
-import os
 import pathlib
 
 print ('-----Authenticator setup-----')
