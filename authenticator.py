@@ -10,7 +10,7 @@ print("1. Scan QR Code")
 print("2. Enter link")
 print("3. Enter Key")
 
-choice = (input('Select a method: '))
+choice = (input('Select your choice: '))
 
 if choice =='1':
     AUTO_FILE_NAME= '2FA.png'
