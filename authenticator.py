@@ -6,8 +6,8 @@ import pathlib
 
 print ('-----Authenticator setup-----')
 print('Select a method: ')
-print("1. Scan QR Code (Coming Soon)")
-print("2. Paste Link (Coming Soon)")
+print("1. Scan QR Code ")
+print("2. Enter link")
 print("3. Enter Secret Key")
 
 choice = (input('Select a method: '))
