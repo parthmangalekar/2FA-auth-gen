@@ -1,6 +1,13 @@
 import pyotp
+import time
+import cv2
+import pathlib
 
-
+print('Methods')
+print('QR code(comming soon)')
+print('Link (comming soon)')
+print('Key')
+input ('Select your method of importing the key for verification: ')
 key=(input('Paste your secret key here: '))
 
 totp = pyotp.TOTP(key)
