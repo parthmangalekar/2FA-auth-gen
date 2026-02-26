@@ -7,10 +7,12 @@ print('Methods')
 print('1.QR code(comming soon)')
 print('2.Link (comming soon)')
 print('3.Key')
-input ('Select your method of importing the key: ')
-key=(input('Paste your secret key here: '))
+choice= (input ('Select your method of importing the key: '))
 
-totp = pyotp.TOTP(key)
+if choice =='3':
+    key=(input('Paste your secret key here: '))
+    totp = pyotp.TOTP(key)
 
 while True:
     print(totp.verify(input("Enter 2FA code: ")))
+
