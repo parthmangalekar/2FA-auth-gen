@@ -7,9 +7,15 @@ print('Methods')
 print('1.QR code(comming soon)')
 print('2.Link (comming soon)')
 print('3.Key')
-choice= (input ('Select your method of importing the key: '))
 
-if choice =='3':
+choice= (input ('Select your preferred method of importing the key: '))
+if choice == '1':
+    auto_file_name = '2FA.png'
+    filepath = pathlib.Path.cwd() / auto_file_name
+    if filepath.exists and filepath.is_file():
+        print(f'Found ',auto_file_name, 'decoding...')
+
+if choice == '3':
     key=(input('Paste your secret key here: '))
     totp = pyotp.TOTP(key)
 
