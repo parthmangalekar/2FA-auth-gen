@@ -15,6 +15,10 @@ if choice == '1':
     if filepath.exists and filepath.is_file():
         print(f'Found ',auto_file_name, 'decoding...')
 
+        img=cv2.imread(str(filepath))
+        detector =cv2.QRCodeDetector()
+        data, points, _ = detector.detectAndDecode(img)
+
 if choice == '3':
     key=(input('Paste your secret key here: '))
     totp = pyotp.TOTP(key)
