@@ -24,7 +24,14 @@ if choice == '1':
                 print('Successfully loaded {totp.name}')
 
             except ValueError:
-                print('')
+                print('Error: The QR code in 2FA.png is not valid')
+
+        else: 
+            print('Error: OpenCV could not find a QR code in 2FA.png')
+
+     else:
+        print(f"Error: '{auto_file_name}' not found in {pathlib.Path.cwd()}")
+        exit()
 if choice == '3':
     key=(input('Paste your secret key here: '))
     totp = pyotp.TOTP(key)
