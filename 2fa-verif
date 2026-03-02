@@ -32,7 +32,11 @@ if choice == '1':
      else:
         print(f"Error: '{auto_file_name}' not found in {pathlib.Path.cwd()}")
         exit()
-if choice == '3':
+
+elif choice == '2':
+    print ('under work')
+    
+elif choice == '3':
     key=(input('Paste your secret key here: '))
     totp = pyotp.TOTP(key)
 
