@@ -18,7 +18,13 @@ if choice == '1':
         img=cv2.imread(str(filepath))
         detector =cv2.QRCodeDetector()
         data, points, _ = detector.detectAndDecode(img)
+        if data:
+            try:
+                totp = pyotp.parse_uri(data)
+                print('Successfully loaded {totp.name}')
 
+            except ValueError:
+                print('')
 if choice == '3':
     key=(input('Paste your secret key here: '))
     totp = pyotp.TOTP(key)
