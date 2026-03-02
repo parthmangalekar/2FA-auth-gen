@@ -4,7 +4,7 @@ import cv2
 import pathlib
 
 print('Methods')
-print('1.QR code(comming soon)')
+print('1.QR code')
 print('2.Link (comming soon)')
 print('3.Key')
 
@@ -29,13 +29,13 @@ if choice == '1':
         else: 
             print('Error: OpenCV could not find a QR code in 2FA.png')
 
-     else:
+    else:
         print(f"Error: '{auto_file_name}' not found in {pathlib.Path.cwd()}")
         exit()
 
 elif choice == '2':
     print ('under work')
-    
+
 elif choice == '3':
     key=(input('Paste your secret key here: '))
     totp = pyotp.TOTP(key)
