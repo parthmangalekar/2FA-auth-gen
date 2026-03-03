@@ -5,7 +5,7 @@ import pathlib
 
 print('Methods')
 print('1.QR code')
-print('2.Link (comming soon)')
+print('2.Link')
 print('3.Key')
 
 choice= (input ('Select your preferred method of importing the key: '))
