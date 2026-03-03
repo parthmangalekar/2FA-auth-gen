@@ -39,6 +39,7 @@ elif choice == '2':
         totp = pyotp.parse_uri(url)
     except ValueError:
         print('Invalid link')
+        exit()
     
 
 elif choice == '3':
