@@ -1,4 +1,3 @@
-    Query successful
 
 TOTP 2FA Toolkit
 
