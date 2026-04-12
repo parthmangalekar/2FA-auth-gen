@@ -2,6 +2,13 @@ import pyotp
 import time
 import cv2
 import pathlib
+import pathlib
+import os
+import base64
+
+DB_file= "secret_key.enc"
+SALT_file= "salt.bin"
+
 
 print ('-----Authenticator setup-----')
 print('Select a method ')
